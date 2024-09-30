@@ -11,6 +11,11 @@ class CrudController extends Controller
 {
     //
     function add(Request $request){
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required | email',
+            'password'=>'required',
+        ]);
         $file = $request->file('file');
         $ext = $file->getClientOriginalExtension();
         $imgName = time() . '.' . $ext;

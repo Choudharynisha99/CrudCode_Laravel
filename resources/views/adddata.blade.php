@@ -36,16 +36,19 @@
                                 <div class="form-floating mb-2">
                                     <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Harry">
                                     <label for="floatingInput">First Name</label>
+                                    <span class="text-danger">@error('name'){{$message}}@enderror</span>
                                 </div>
 
                                 <div class="form-floating mb-2">
                                     <input type="email" name="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
                                     <label for="floatingEmail">Email Address</label>
+                                    <span class="text-danger">@error('email'){{$message}}@enderror</span>
                                 </div>
 
                                 <div class="form-floating mb-2">
                                     <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
                                     <label for="floatingPassword">Password</label>
+                                    <span class="text-danger">@error('password'){{$message}}@enderror</span>
                                 </div>
                                 <div class="form-floating mb-3">
                                     <input type="file" name="file" class="form-control" id="floatingPassword"> 
